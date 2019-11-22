@@ -1,6 +1,6 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
-import { MDBBootstrapModule } from 'angular-bootstrap-md';
+import { MDBBootstrapModule, NavbarModule } from 'angular-bootstrap-md';
 import { AppComponent } from './app.component';
 
 @NgModule({
@@ -9,8 +9,8 @@ import { AppComponent } from './app.component';
   ],
   imports: [
     BrowserModule,
-    MDBBootstrapModule.forRoot()
-
+    MDBBootstrapModule.forRoot(),
+    NavbarModule
   ],
   providers: [],
   bootstrap: [AppComponent]
