@@ -2,6 +2,7 @@ package com.heinsohn.api.rest;
 
 import java.io.IOException;
 
+import javax.ejb.EJB;
 import javax.servlet.ServletException;
 import javax.servlet.annotation.WebServlet;
 import javax.servlet.http.HttpServlet;
@@ -10,8 +11,10 @@ import javax.servlet.http.HttpServletResponse;
 
 import com.heinsohn.api.ejb.EmpleadorEJB;
 
-@WebServlet
+@WebServlet(urlPatterns = "/api/v1/empleador")
 public class EmpleadorRestServlet extends HttpServlet {
+	
+	@EJB(beanName="EmpleadorEJB")
 
 	private EmpleadorEJB empleadorEJB ;
 	

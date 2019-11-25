@@ -1,10 +1,17 @@
 package com.heinsohn.api.ejb;
 
+import javax.ejb.Local;
+
+import javax.ejb.Stateless;
+
 import com.heinsohn.api.ejb.dao.DAO;
 
 import com.heinsohn.api.ejb.dao.OperacionDao;
 
 import com.heinsohn.api.ejb.domain.Empleador;
+
+@Local
+@Stateless(name = "EmpleadorEJB")
 
 public class EmpleadorEJB extends DAO implements OperacionDao<Empleador> {
 

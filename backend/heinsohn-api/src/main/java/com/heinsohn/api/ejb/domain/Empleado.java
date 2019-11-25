@@ -2,6 +2,9 @@ package com.heinsohn.api.ejb.domain;
 
 import javax.persistence.Column;
 import javax.persistence.Entity;
+import javax.persistence.GeneratedValue;
+import javax.persistence.GenerationType;
+import javax.persistence.Id;
 import javax.persistence.Table;
 //Nos permite decirle al JPA el objeto puede ser persistido
 @Entity
@@ -10,7 +13,10 @@ import javax.persistence.Table;
 
 public class Empleado {
 	//Permite crear y configurar una columna en la table
-	
+	@Id
+	@GeneratedValue(strategy = GenerationType.IDENTITY )
+	@Column(name="Id")
+	private long Id;
 	@Column(name="emp_identificacion", nullable = false, unique=true, length = 20)
 	private String identificacion;
 	
